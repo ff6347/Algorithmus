@@ -43,7 +43,7 @@ var get_neighbours = function(ndx, list, width, height, steps) {
 
 
 
-  
+
   if (right !== true && left !== true && top !== true && bottom !== true) {
     console.log('centered with index "%s" point is at x: %s y: %s ', ndx, list[ndx].x, list[ndx].y);
     centered = true;
@@ -150,12 +150,11 @@ return neighbours;
 
 var img;
 function preload() {
-  img = loadImage("helloworld.jpg");
+  img = loadImage("helloworld.png");
 }
 
 function setup(){
 
-  image(img, 0, 0);
 
 
   createCanvas(w,h);
@@ -197,7 +196,7 @@ function draw(){
  // fill(0,0,0,80);
   noStroke();
 
-  
+
   strokeWeight(4);
   stroke (0, 126, 125, 170);
   line(startpoint.x, startpoint.y, nextpoint.x, nextpoint.y );
@@ -218,10 +217,9 @@ function draw(){
   stroke (0, 126, 125, 230);
   line(startpoint.x + step*2 , startpoint.y + step*2, nextpoint.x + step*2, nextpoint.y + step*2);
 
-
   startpoint = nextpoint;
 
-
+  image(img, 0, 0);
 }
 
 
